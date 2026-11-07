@@ -138,8 +138,9 @@ function scrollAnims(el, desktop) {
   const p2 = q('.portrait2')
   gsap.fromTo(p2, { clipPath: 'inset(100% 0% 0% 0% round 28px)' }, { clipPath: 'inset(0% 0% 0% 0% round 28px)', duration: 1.4, ease: 'power3.inOut', clearProps: 'clipPath', scrollTrigger: once(p2, 'top 82%') })
   gsap.from(p2.children, { scale: 1.06, duration: 1.6, ease: 'power3.out', scrollTrigger: once(p2, 'top 82%') })
-  const small = q('.about .small')
-  gsap.from(small, { y: 24, opacity: 0, duration: 1, delay: 0.3, ease: 'power3.out', scrollTrigger: once(small, 'top 90%') })
+  all('.about .small').forEach((p, i) => {
+  gsap.from(p, { y: 24, opacity: 0, duration: 1, delay: 0.3 + i * 0.15, ease: 'power3.out', scrollTrigger: once(p, 'top 90%') })
+})
 
   all('.services li').forEach((li) => {
     gsap.timeline({ scrollTrigger: once(li, 'top 88%') })
@@ -258,12 +259,11 @@ function About() {
     <section id="about" aria-labelledby="about-h">
       <div className="head"><h2 id="about-h">About</h2></div>
       <div className="about">
-        <div className="portrait2"><img src="/images/evan.jpeg" alt="Portrait of Revanda" /></div>
+        <div className="portrait2"><img src="/images/Revan.png" alt="Portrait of Revanda" /></div>
         <div>
           <p className="lead">I build digital experiences through technology and creativity.</p>
-          <p className="small">I'm Revanda, an Informatics and Computer Engineering Education graduate from Universitas Negeri Semarang. I have a strong interest in web development, particularly building responsive and user-friendly applications using React, Laravel, and modern web technologies.
-
-Through academic projects, internships, and organizational experiences, I've developed skills in problem-solving, teamwork, and turning ideas into practical digital solutions. I'm always eager to explore new technologies, learn, and create meaningful work.</p>
+          <p className="small">I’m Revanda, an Informatics and Computer Engineering Education graduate from Universitas Negeri Semarang. I have a strong interest in web development, particularly building responsive and user-friendly applications using React, Laravel, and modern web technologies.</p>
+          <p className="small" style={{ marginTop: 16 }}>Through academic projects, internships, and organizational experiences, I’ve developed skills in problem-solving, teamwork, and turning ideas into practical digital solutions. I’m always eager to explore new technologies, learn, and create meaningful work.</p>
         </div>
       </div>
     </section>
