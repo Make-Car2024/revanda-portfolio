@@ -224,7 +224,10 @@ function Hero() {
         <a className="btn" href="#works">See my works <Arrow /></a>
       </div>
       <figure className="portrait" style={{ margin: 0 }}>
-        {<img src="/images/Revan.png" alt="Portrait of Revanda" /> }
+        {{
+          title: 'Foto Evan',
+          img: '/images/evan.jpeg',
+        } }
       </figure>
       <div className="bigname" aria-hidden="true">
         {[...NAME].map((c, i) => <span className="ch" key={i}>{c === ' ' ? '\u00a0' : c}</span>)}
