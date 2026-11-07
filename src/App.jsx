@@ -261,7 +261,7 @@ function About() {
     <section id="about" aria-labelledby="about-h">
       <div className="head"><h2 id="about-h">About</h2></div>
       <div className="about">
-        <div className="portrait2"><img src="src\assets\evan_e_6804 4x6.jpg.jpeg" /></div>
+        <div className="portrait2"><img src="/images/evan.jpeg" alt="Portrait of Revanda" /></div>
         <div>
           <p className="lead">I build digital experiences through technology and creativity.</p>
           <p className="small">I'm Revanda, an Informatics and Computer Engineering Education graduate from Universitas Negeri Semarang. I have a strong interest in web development, particularly building responsive and user-friendly applications using React, Laravel, and modern web technologies.
