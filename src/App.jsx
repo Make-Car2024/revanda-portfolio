@@ -223,11 +223,8 @@ function Hero() {
         <p><strong>Hi, I’m {NAME}</strong> — a Web Developer with a background in Informatics Education, passionate about developing modern web applications, exploring new technologies, and delivering meaningful digital solutions.</p>
         <a className="btn" href="#works">See my works <Arrow /></a>
       </div>
-      <figure className="portrait" style={{ margin: 0 }}>
-        {{
-          title: 'Foto Evan',
-          img: '/images/evan.jpeg',
-        } }
+    <figure className="portrait" style={{ margin: 0 }}>
+        <img src="/images/evan.jpeg" alt={`Portrait of ${NAME}`} />
       </figure>
       <div className="bigname" aria-hidden="true">
         {[...NAME].map((c, i) => <span className="ch" key={i}>{c === ' ' ? '\u00a0' : c}</span>)}
