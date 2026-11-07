@@ -10,38 +10,40 @@ let seen = false
 try { seen = sessionStorage.getItem('intro') === '1'; sessionStorage.setItem('intro', '1') } catch { /* storage blocked */ }
 const first = !seen && !reduce // module-level so StrictMode's double effect doesn't skip the loader
 
+
 const WORKS = [
   {
     title: 'Website ZeroVault',
     meta: 'Website Penelitian Skripsi, 2026',
-    img: 'public/skripsi.png',
+    img: '/images/skripsi.png',
     url: 'https://skripsi-revan.vercel.app/',
   },
   {
     title: 'Magang di DISKOMINFO Kabupaten Semarang',
-    meta: 'intern, 2025',
-    img: 'public\\magang.jpg',
+    meta: 'Intern, 2025',
+    img: '/images/magang.jpg',
     url: '#',
   },
   {
     title: 'Guru Praktikan SMA Nusaputera',
     meta: 'Guru Praktikan, 2025',
-    img: 'public/ppl.jpg',
+    img: '/images/ppl.jpg',
     url: '#',
   },
   {
     title: 'KKN di Kelurahan Wujil',
-    meta: 'membuat website peminjaman buku, 2026',
-    img: 'public\\kkn.jpeg',
+    meta: 'Membuat website peminjaman buku, 2026',
+    img: '/images/kkn.jpeg',
     url: 'https://v0-library-management-system-lovat.vercel.app/',
   },
   {
     title: 'Laporan Proyek Kuliah',
     meta: 'Kumpulan Laporan',
-    img: 'public\\lulus.JPG',
+    img: '/images/lulus.JPG',
     url: 'https://drive.google.com/drive/folders/11XxF5MYxF2255mfX4BISF0F--1Re5TSw?usp=sharing',
   },
-]
+];
+
 const SKILLS = [
   ['Design', 'Figma / Canva'],
   ['Development', 'HTML & CSS / JavaScript / React / Tailwind / Bootstrap '],
@@ -222,7 +224,7 @@ function Hero() {
         <a className="btn" href="#works">See my works <Arrow /></a>
       </div>
       <figure className="portrait" style={{ margin: 0 }}>
-        {<img src="src\assets\Revan.png" alt={`Portrait of ${NAME}`} /> }
+        {<img src="/images/Revan.png" alt="Portrait of Revanda" /> }
       </figure>
       <div className="bigname" aria-hidden="true">
         {[...NAME].map((c, i) => <span className="ch" key={i}>{c === ' ' ? '\u00a0' : c}</span>)}
